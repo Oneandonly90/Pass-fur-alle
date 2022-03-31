@@ -20,22 +20,22 @@ web = webdriver.Chrome(options=options)
 # Constants
 startBookingDate = datetime.today().strftime('%Y-%m-%d') # Start searching today, if you want to start some other day, just change this to a date with the format YYYY-MM-DD
 endBookingDate = "2022-12-24" # The last date you want to search for
-firstDate = False # If you want to look for the first date using "First available time", change to True
+firstDate = True # If you want to look for the first date using "First available time", change to True
 people = [
     { 
-        "firstName": "Test", 
-        "lastName": "Testsson"
+        "Olle": "Test", 
+        "Wahlquist": "Testsson"
     }
 ]
-emailAddress = 'test@test.se' # Your email
-phoneNumber = '076127567' # Your phone number
+emailAddress = 'op.wahlquist@gmail.com' # Your email
+phoneNumber = '0705615456' # Your phone number
 manualVerify = True # Change this to False if you want the script to automatically book the time in the last step
 
 # Terminal output
 print ('Alla län: https://polisen.se/tjanster-tillstand/pass-och-nationellt-id-kort/boka-tid-hitta-passexpedition/')
-lan = input("Välj län. Skriv sista delen av URLen på pass-sidan för ditt län. T ex 'halland', se länken ovan. Eller tryck enter för skane: ")
+vasternorrland = input("Välj län. Skriv sista delen av URLen på pass-sidan för ditt län. T ex 'halland', se länken ovan. Eller tryck enter för skane: ")
 if lan:
-    expedition = input("Välj expedition. T ex 'Halmstad', se länken ovan. Eller tryck enter för hela länet: ")
+    expedition = Sundsvall("Välj expedition. T ex 'Halmstad', se länken ovan. Eller tryck enter för hela länet: ")
 
 if lan and expedition:
     print("Län: ", lan)
